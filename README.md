@@ -1,4 +1,4 @@
-orchestrator-unit-test: Unit Test for JBoss PAM Project
+pam-proxy-service: controller and proxy service for PAM Workflow engine
 ======================================================
 Author: Nevin Zhu  
 Level: Intermediate  
