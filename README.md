@@ -60,7 +60,7 @@ Investigate the Console Output
 
 If the command is successful, you will see output similar to this:
 
-----
+```text
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -81,6 +81,6 @@ If the command is successful, you will see output similar to this:
 2020-03-09 23:28:22.273  INFO 44013 --- [localhost:5672]] org.apache.qpid.jms.JmsConnection        : Connection ID:ff042793-63d6-4e33-8f56-75cdd4454374:1 connected to remote Broker: amqp://localhost:5672
 2020-03-09 23:28:22.297  INFO 44013 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
 2020-03-09 23:28:22.301  INFO 44013 --- [           main] com.malware.MainApplication              : Started MainApplication in 2.817 seconds (JVM running for 3.297)
-----
+```
    
 
