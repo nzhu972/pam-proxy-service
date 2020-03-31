@@ -129,12 +129,12 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency> -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.optaplanner</groupId>
 			<artifactId>optaplanner-persistence-jaxb</artifactId>
 			<version>7.23.0.Final-redhat-00003</version>
 			<scope>provided</scope>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.kie</groupId>
 			<artifactId>kie-api</artifactId>
