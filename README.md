@@ -1,7 +1,6 @@
 pam-proxy-service: controller and proxy service for PAM Workflow engine
 ======================================================
-Author: Nevin Zhu  
-Level: Intermediate  
+Author: Nevin Zhu   
 Technologies: JBoss PAM 7.x, SpringBoot
 Summary: The `pam-proxy-service` is an app that interacts with the workflow engine on JBoss PAM 7.x and facilitate communication between PAM and external systems such as message broker  
 Target Product: JBoss PAM 7.x
@@ -42,7 +41,7 @@ _NOTE: The following build command assumes you have configured your Maven user s
 2. Type this command to build and run the project assuming this is running on your local workstation:
 
         >mvn clean install
-        >java -jar target/pam-proxy-service-1.0.0-SNAPSHOT.jar
+        >java -jar target/pam-proxy-service-1.0.0-SNAPSHOT.jar --spring.config.location=<path-to-propertyfile>
         
 
 Build and run the Project on DEV environment
@@ -52,7 +51,7 @@ Build and run the Project on DEV environment
 2. Type this command to build and run the project assuming this is running on your local workstation:
 
         >mvn clean install
-        >java -Dspring.profiles.active=dev -jar target/pam-proxy-service-1.0.0-SNAPSHOT.jar
+        >java -jar target/pam-proxy-service-1.0.0-SNAPSHOT.jar --spring.config.location=<path-to-dev-propertyfile>
         
 
 Investigate the Console Output
