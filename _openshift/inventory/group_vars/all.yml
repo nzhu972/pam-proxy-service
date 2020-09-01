@@ -32,6 +32,12 @@ openshift_cluster_content:
         namespace: "{{ project_params.NAMESPACE }}"
         tags:
           - create-build-config
+      - name: Config Map
+        template: "{{ playbook_dir }}/configMap.yaml"
+        namespace: "{{ project_params.NAMESPACE }}"
+        params_from_vars: "{{ project_params }}"
+        tags:
+          - deploy
       - name: Deployment Config
         template: "{{ playbook_dir }}/deploymentConfig.yaml"
         params_from_vars: "{{ project_params | combine(deployment_config_params) }}"

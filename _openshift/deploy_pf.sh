@@ -16,7 +16,7 @@ echo "User's OCP token => $OCP_TOKEN"
 # to apply the templates to the OCP cluster.  Note the environment variables
 # ("-e") passed to the `ansible-playbook` command in the `deploy` script.
 
-TAGS='create-build-config'
+TAGS='deploy'
 
 ./deploy -e ocp_user='philip@nvsconsulting.io' \
          -e ocp_token="$OCP_TOKEN" \
@@ -29,4 +29,4 @@ TAGS='create-build-config'
          -e service='malware-proxy-service' \
          -e apps_subdomain='ocp.nvsconsulting.io' \
          -e scm_url='https://github.com/nzhu972/pam-proxy-service.git' \
-         -e scm_ref='master'
+         -e scm_ref='openshift'

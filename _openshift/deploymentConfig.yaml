@@ -21,22 +21,25 @@ objects:
             name: ${SERVICE}
         spec:
           containers:
-            - env:
-                - name: NAMESPACE
-                  value: ${NAMESPACE}
-                - name: MYSQL_HOST
-                  value: database.${NAMESPACE}.svc.cluster.local
-                - name: MYSQL_PORT
-                  value: "3306"
-                - name: MYSQL_DATABASE
-                  value: "yellowdog"
-                - name: MYSQL_USER
-                  value: "yellowdog"
-                - name: MYSQL_PASSWORD
-                  value: "YellowDog1234!@#$"
-              imagePullPolicy: Always
-              name: hr-authentication
+            - imagePullPolicy: Always
+              name: pam-proxy-service
               image: ${DOCKER_REPO_URL}/${IMAGE_NAMESPACE}/${SERVICE}:${IMAGE_VERSION}
+              volumeMounts:
+                - name: spring-config
+                  mountPath: /deployments/application.properties
+                  readOnly: true
+                  subPath: application.properties
+              env:
+                - name: SPRING_CONFIG_LOCATION
+                  value: /deployments/application.properties
+          volumes:
+            - name: spring-config
+              configMap:
+                name: proxy-service-configmap
+                defaultMode: 440
+                items:
+                  - key: application.properties
+                    path: application.properties
           imagePullSecrets:
             - name: artifactory-puller
       triggers:
