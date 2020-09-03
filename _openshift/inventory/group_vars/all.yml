@@ -7,9 +7,9 @@ project_params:
   IMAGE_NAMESPACE: "{{ image_namespace_name }}"
   DOCKER_REPO_URL: "{{ docker_repo_url }}"
   SERVICE: "{{ service }}"
-  SCM_URL: "{{ scm_url }}"
-  SCM_REF: "{{ scm_ref }}"
-  APP_NAME: "{{ app_name }}"
+  SCM_URL: "https://github.dso.ncps.us-cert.gov/malware-nextgen-pam/PamProxyService.git"
+  SCM_REF: "openshift"
+  APP_NAME: "proxy-service"
 
 deployment_config_params:
   IMAGE_VERSION: "{{ image_version if image_version is defined else 'latest' }}"
