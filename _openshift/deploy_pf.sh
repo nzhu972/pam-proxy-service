@@ -22,11 +22,13 @@ TAGS='deploy'
          -e ocp_token="$OCP_TOKEN" \
          -e ocp_url='https://ocp.nvsconsulting.io:8443' \
          -e docker_repo_url='quay-enterprise-quay-enterprise.ocp.nvsconsulting.io' \
-         -e namespace_name='malware-proxy-service' \
+         -e namespace_name='malware-pam-orchestrator' \
          -e image_namespace_name='philip' \
          -e include_tags=$TAGS \
          -e filter_tags=$TAGS \
          -e service='malware-proxy-service' \
          -e apps_subdomain='ocp.nvsconsulting.io' \
          -e scm_url='https://github.com/nzhu972/pam-proxy-service.git' \
-         -e scm_ref='openshift'
+         -e scm_ref='openshift' \
+         -e app_name='proxy-service'
+

@@ -7,7 +7,9 @@ objects:
   - apiVersion: v1
     kind: ConfigMap
     metadata:
-      name: proxy-service-configmap
+      name: ${APP_NAME}-configmap
+      labels:
+        app: ${APP_NAME}
     data:
       application.properties: |-
         #############################
@@ -106,3 +108,7 @@ objects:
         pam.signal.staticanalysis_nonarchive=StaticNonArchiveAnalysisRcv
         pam.signal.staticanalysis_archive=StaticArchiveAnalysisRcv
         pam.signal.dynamicanalysis=DynamicAnalysisRcv
+parameters:
+  - name: APP_NAME
+    required: true
+    description: The app name

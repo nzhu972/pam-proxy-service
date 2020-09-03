@@ -8,8 +8,8 @@ objects:
     kind: Route
     metadata:
       labels:
-        name: ${SERVICE}
-      name: ${SERVICE}
+        name: ${APP_NAME}
+      name: ${APP_NAME}
     spec:
       host: ${SERVICE}.${NAMESPACE}.${APPS_SUBDOMAIN}
       to:
@@ -30,3 +30,6 @@ parameters:
     displayName: Service Name
     description: Service Name
     required: true
+  - name: APP_NAME
+    required: true
+    description: The app name

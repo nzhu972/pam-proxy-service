@@ -8,8 +8,8 @@ objects:
     kind: BuildConfig
     metadata:
       labels:
-        app: ${SERVICE}
-      name: ${SERVICE}
+        app: ${APP_NAME}
+      name: ${APP_NAME}
     spec:
       output:
         pushSecret:
@@ -58,3 +58,6 @@ parameters:
     default: master
     required: false
     description: The Git ref to build in SCM_URL
+  - name: APP_NAME
+    required: true
+    description: The app name

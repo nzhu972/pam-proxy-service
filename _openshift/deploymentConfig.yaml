@@ -7,18 +7,20 @@ objects:
   - apiVersion: v1
     kind: DeploymentConfig
     metadata:
-      name: ${SERVICE}
+      name: ${APP_NAME}
+      labels:
+        app: ${APP_NAME}
     spec:
       replicas: 1
       selector:
-        name: ${SERVICE}
+        name: ${APP_NAME}
       strategy:
         type: Rolling
         rollingParams:
       template:
         metadata:
           labels:
-            name: ${SERVICE}
+            name: ${APP_NAME}
         spec:
           containers:
             - imagePullPolicy: Always
@@ -65,3 +67,6 @@ parameters:
     displayName: Service Name
     description: Service Name
     required: true
+  - name: APP_NAME
+    required: true
+    description: The app name

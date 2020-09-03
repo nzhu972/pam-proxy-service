@@ -9,6 +9,7 @@ project_params:
   SERVICE: "{{ service }}"
   SCM_URL: "{{ scm_url }}"
   SCM_REF: "{{ scm_ref }}"
+  APP_NAME: "{{ app_name }}"
 
 deployment_config_params:
   IMAGE_VERSION: "{{ image_version if image_version is defined else 'latest' }}"
