@@ -30,7 +30,8 @@ objects:
         type: Source
         sourceStrategy:
           forcePull: true
-          pullSecret: artifactory
+          pullSecret:
+            name: artifactory
           from:
             kind: ImageStreamTag
             namespace: openshift

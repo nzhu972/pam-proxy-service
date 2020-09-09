@@ -51,9 +51,9 @@ openshift_cluster_content:
         namespace: "{{ project_params.NAMESPACE }}"
         tags:
           - deploy
-      - name: Route
-        template: "{{ playbook_dir }}/route.yaml"
-        namespace: "{{ project_params.NAMESPACE }}"
-        params_from_vars: "{{ project_params | combine(route_params) }}"
-        tags:
-          - deploy
+#      - name: Route
+#        template: "{{ playbook_dir }}/route.yaml"
+#        namespace: "{{ project_params.NAMESPACE }}"
+#        params_from_vars: "{{ project_params | combine(route_params) }}"
+#        tags:
+#          - deploy
