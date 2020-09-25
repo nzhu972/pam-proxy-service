@@ -13,12 +13,12 @@ objects:
       name: ${APP_NAME}
     spec:
       ports:
-        - port: 8005
+        - port: 8085
           protocol: TCP
-          targetPort: 8005
+          targetPort: 8085
           name: proxysvc-port
       selector:
-        name: ${SERVICE}
+        name: ${APP_NAME}
       sessionAffinity: None
       type: ClusterIP
 parameters:

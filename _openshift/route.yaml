@@ -14,7 +14,7 @@ objects:
       host: ${SERVICE}.${NAMESPACE}.${APPS_SUBDOMAIN}
       to:
         kind: Service
-        name: ${SERVICE}
+        name: ${APP_NAME}
       port:
         targetPort: proxysvc-port
 parameters:
